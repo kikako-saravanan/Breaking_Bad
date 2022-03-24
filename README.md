@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+Details:-
+---------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+• Created a webpage to search about the breaking bad cast.
 
-## Available Scripts
+• Rendered all the characters if the search field is empty.
 
-In the project directory, you can run:
+• Used pagination to organize the number of characters on one page.
 
-### `npm start`
+• On Hover over each page spinned the image and showed some details about the character.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+• On click on each character, wiki link about the character bio will open.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Used Resources or References for building this website:-
+---------------------------------------------------------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.https://breakingbad.fandom.com/wiki/Wiki
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.https://breakingbadapi.com/documentation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.https://reactjsexample.com/simple-library-for-pagination-in-react/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4.Traversy Media (youtube)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Components Created:-
+--------------------
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.Characters(Character grid and Character item)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2.UI(header, search, spinner)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3.Pagination component(custom component ,not used in this project due to a minor bug) and pagination library(react-pagination-library, used instead of custom component)
 
-## Learn More
+HTTP Request:-
+--------------
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Used Axios
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Concepta Implemented and used:-
+------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. React Basics
+2. Hooks
+3. Lifecycle methods
+4. State and props
+5. components
+6. css Effects
+7. Axios
