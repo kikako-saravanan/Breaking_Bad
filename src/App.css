@@ -135,3 +135,14 @@ input[type="text"] {
     object-fit: contain;
   }
 }
+
+.pagination {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  left: 650px !important;
+  top: 940px !important;
+  color: #3fb573;
+  font-size: 25px;
+}

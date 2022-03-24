@@ -4,7 +4,9 @@ import Header from "./components/ui/Header";
 import CharacterGrid from "./components/characters/CharacterGrid";
 import Search from "./components/ui/Search";
 import "./App.css";
-import Pagination from "./components/Pagination";
+//import Pagination from "./components/Pagination";
+import Pagination from "react-pagination-library";
+import "react-pagination-library/build/css/index.css";
 /*
 Details:-
 
@@ -53,15 +55,23 @@ const App = () => {
     fetchItems();
   }, [query]); //query is a dependency,whenever query changes this function will be executed
 
+  const changeCurrentPage = (numPage) => {
+    setCurrentPage(numPage);
+    //fetch a data
+    //or update a query to get data
+  };
+  const totalPages = Math.ceil(items.length / imagesPerPage);
+
   return (
     <div className="container">
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
       <CharacterGrid isLoading={isLoading} items={currentImage} />
       <Pagination
-        imagesPerPage={imagesPerPage}
-        totalImages={items.length}
-        paginate={paginate}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        changeCurrentPage={changeCurrentPage}
+        theme="bottom-border"
       />
     </div>
   );
