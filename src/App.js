@@ -4,6 +4,7 @@ import Header from "./components/ui/Header";
 import CharacterGrid from "./components/characters/CharacterGrid";
 import Search from "./components/ui/Search";
 import "./App.css";
+import Pagination from "./components/Pagination";
 /*
 Details:-
 
@@ -22,6 +23,17 @@ const App = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState("");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [imagesPerPage] = useState(8);
+
+  //get current images
+  const indexOfLastImage = currentPage * imagesPerPage;
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
+  const currentImage = items.slice(indexOfFirstImage, indexOfLastImage);
+
+  //change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -45,7 +57,12 @@ const App = () => {
     <div className="container">
       <Header />
       <Search getQuery={(q) => setQuery(q)} />
-      <CharacterGrid isLoading={isLoading} items={items} />
+      <CharacterGrid isLoading={isLoading} items={currentImage} />
+      <Pagination
+        imagesPerPage={imagesPerPage}
+        totalImages={items.length}
+        paginate={paginate}
+      />
     </div>
   );
 };
